@@ -52,7 +52,7 @@ namespace blood_bank_management_sys
                     using (SqlCommand cmd = new SqlCommand(insertQuery, conn))
                     {
                         cmd.Parameters.AddWithValue("@Username", username);
-                        cmd.Parameters.AddWithValue("@Password", password); // Hash in prod!
+                        cmd.Parameters.AddWithValue("@Password", password); 
                         cmd.Parameters.AddWithValue("@Role", role);
                         cmd.Parameters.AddWithValue("@FullName", fullname);
 
@@ -73,6 +73,10 @@ namespace blood_bank_management_sys
                 lblStatus.Text = "Error: " + ex.Message;
             }
         }
- 
+
+        private void SignupForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

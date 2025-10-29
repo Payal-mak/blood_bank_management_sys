@@ -56,7 +56,6 @@ namespace blood_bank_management_sys
                         bankId = (int)cmd.ExecuteScalar();
                     }
 
-                    // Only insert inventory rows for non-empty, >0 unit fields:
                     AddBloodInventory(bankId, "A+", txtUnitsAPlus.Text, dtpExpiryAPlus.Value, conn);
                     AddBloodInventory(bankId, "A-", txtUnitsAMinus.Text, dtpExpiryAMinus.Value, conn);
                     AddBloodInventory(bankId, "B+", txtUnitsBPlus.Text, dtpExpiryBPlus.Value, conn);

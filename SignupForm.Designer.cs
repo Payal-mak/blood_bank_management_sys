@@ -143,6 +143,7 @@
             this.Controls.Add(this.lblStatus);
             this.Name = "SignupForm";
             this.Text = "SignupForm";
+            this.Load += new System.EventHandler(this.SignupForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

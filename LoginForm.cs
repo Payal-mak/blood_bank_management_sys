@@ -13,7 +13,6 @@ namespace blood_bank_management_sys
             InitializeComponent();
         }
 
-        // Populates the Role ComboBox on Load
         private void LoginForm_Load(object sender, EventArgs e)
         {
             cbRole.Items.Clear();
@@ -23,7 +22,6 @@ namespace blood_bank_management_sys
             cbRole.SelectedIndex = 0;
         }
 
-        // The actual login logic (call this from button1_Click)
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
@@ -55,7 +53,7 @@ namespace blood_bank_management_sys
                             lblStatus.Text = "Login successful!";
                             DashboardForm dashboardForm = new DashboardForm();
                             dashboardForm.Show();
-                            this.Hide(); // Hide the login form
+                            this.Hide(); 
                         }
                         else
                         {
@@ -70,21 +68,16 @@ namespace blood_bank_management_sys
             }
         }
 
-
-        // The login button in designer points to this handler (calls btnLogin_Click)
         private void button1_Click(object sender, EventArgs e)
         {
             btnLogin_Click(sender, e);
         }
 
-        // Signup Button Click Event (opens SignupForm)
         private void btnSignup_Click_1(object sender, EventArgs e)
         {
             SignupForm signupForm = new SignupForm();
             signupForm.ShowDialog();
         }
-
-        // For designer compatibility (empty handlers)
         private void label1_Click(object sender, EventArgs e) { }
         private void label1_Click_1(object sender, EventArgs e) { }
         private void textBox2_TextChanged(object sender, EventArgs e) { }

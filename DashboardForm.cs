@@ -18,7 +18,6 @@ namespace blood_bank_management_sys
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
         }
 
-        // Designer references this
         private void DashboardForm_Load(object sender, EventArgs e)
         {
             lblWelcome.Text = "Welcome User";
@@ -66,10 +65,9 @@ namespace blood_bank_management_sys
             this.Close();
         }
 
-        // Designer references this
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            // No logic needed, but must be present for designer compatibility!
+            // haha
         }
     }
 }

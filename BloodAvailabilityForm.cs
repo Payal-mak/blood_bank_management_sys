@@ -14,8 +14,6 @@ namespace blood_bank_management_sys
             InitializeComponent();
             btnSearch.Click += btnSearch_Click;
         }
-
-        // Designer references this
         private void BloodAvailabilityForm_Load(object sender, EventArgs e)
         {
             LoadBloodInventory();

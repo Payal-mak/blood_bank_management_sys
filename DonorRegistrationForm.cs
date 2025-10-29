@@ -6,13 +6,12 @@ namespace blood_bank_management_sys
 {
     public partial class DonorRegistrationForm : Form
     {
-        // Change to your SQL Server details
         string connectionString = @"Server=PAYAL\SQLEXPRESS;Database=BloodBankDB;Trusted_Connection=True;";
 
         public DonorRegistrationForm()
         {
             InitializeComponent();
-            btnRegister.Click += btnRegister_Click; // Make sure this event is wired up
+            btnRegister.Click += btnRegister_Click; 
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -24,7 +23,6 @@ namespace blood_bank_management_sys
             string address = txtAddress.Text.Trim();
             string email = txtEmail.Text.Trim();
 
-            // Simple validation
             if (string.IsNullOrEmpty(fullname) || string.IsNullOrEmpty(username) ||
                 string.IsNullOrEmpty(bloodGroup) || string.IsNullOrEmpty(contact) ||
                 string.IsNullOrEmpty(address) || string.IsNullOrEmpty(email))
@@ -39,7 +37,6 @@ namespace blood_bank_management_sys
                 {
                     conn.Open();
 
-                    // Optionally check if this username already exists in Users table
                     string userCheck = "SELECT COUNT(*) FROM Users WHERE Username = @Username";
                     using (SqlCommand checkCmd = new SqlCommand(userCheck, conn))
                     {
@@ -52,18 +49,17 @@ namespace blood_bank_management_sys
                         }
                     }
 
-                    // Insert into Users (so donor can login)
                     string insertUser = "INSERT INTO Users (Username, PasswordHash, Role, FullName) VALUES (@Username, @PasswordHash, @Role, @FullName)";
                     using (SqlCommand userCmd = new SqlCommand(insertUser, conn))
                     {
                         userCmd.Parameters.AddWithValue("@Username", username);
-                        userCmd.Parameters.AddWithValue("@PasswordHash", "donorpass"); // HARD-CODED: Replace with proper password or ask user
+                        userCmd.Parameters.AddWithValue("@PasswordHash", "donorpass"); 
                         userCmd.Parameters.AddWithValue("@Role", "Donor");
                         userCmd.Parameters.AddWithValue("@FullName", fullname);
                         userCmd.ExecuteNonQuery();
                     }
 
-                    // Insert into Donors table (get BankID as needed; here set as NULL)
+                    
                     string insertDonor = @"INSERT INTO Donors (Name, BloodGroup, Contact, Address, Email, BankID) 
                                            VALUES (@Name, @BloodGroup, @Contact, @Address, @Email, NULL)";
                     using (SqlCommand donorCmd = new SqlCommand(insertDonor, conn))
@@ -87,12 +83,12 @@ namespace blood_bank_management_sys
 
         private void cbBloodGroup_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // You can leave this empty or use as needed.
+            //haha
         }
 
         private void DonorRegistrationForm_Load(object sender, EventArgs e)
         {
-            // You can add code here if you need to initialize something on form load.
+            // haha
         }
     }
 }

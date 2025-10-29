@@ -17,7 +17,7 @@ namespace blood_bank_management_sys
 
         private void ReportGenerationForm_Load(object sender, EventArgs e)
         {
-            cbReportType.SelectedIndex = 0; // default selection
+            cbReportType.SelectedIndex = 0; 
         }
 
         private void BtnGenerateReport_Click(object sender, EventArgs e)
