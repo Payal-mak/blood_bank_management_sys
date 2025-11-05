@@ -16,6 +16,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignupForm));
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
@@ -141,6 +142,7 @@
             this.Controls.Add(this.txtFullName);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.lblStatus);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignupForm";
             this.Text = "SignupForm";
             this.Load += new System.EventHandler(this.SignupForm_Load);

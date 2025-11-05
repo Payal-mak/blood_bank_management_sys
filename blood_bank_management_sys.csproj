@@ -129,6 +129,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RecipientForm.resx">
+      <DependentUpon>RecipientForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportGenerationForm.resx">
       <DependentUpon>ReportGenerationForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,6 +25,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HospitalSearchForm));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblHospitalName = new System.Windows.Forms.Label();
             this.txtHospitalName = new System.Windows.Forms.TextBox();
@@ -161,6 +162,7 @@
             this.Controls.Add(this.lblAddContact);
             this.Controls.Add(this.txtAddContact);
             this.Controls.Add(this.btnAddHospital);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HospitalSearchForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital Search";

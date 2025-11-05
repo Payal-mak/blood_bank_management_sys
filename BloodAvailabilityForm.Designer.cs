@@ -20,6 +20,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BloodAvailabilityForm));
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblBloodGroupSearch = new System.Windows.Forms.Label();
             this.cbBloodGroupSearch = new System.Windows.Forms.ComboBox();
@@ -62,8 +63,6 @@
             this.cbBloodGroupSearch.Name = "cbBloodGroupSearch";
             this.cbBloodGroupSearch.Size = new System.Drawing.Size(250, 24);
             this.cbBloodGroupSearch.TabIndex = 2;
-
-            //blood group 
             // 
             // btnSearch
             // 
@@ -100,6 +99,7 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dgvBloodInventory);
             this.Controls.Add(this.lblStatus);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "BloodAvailabilityForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blood Availability";
