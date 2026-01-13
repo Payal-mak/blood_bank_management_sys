@@ -40,7 +40,7 @@ It allows users to:
 - **Framework:** .NET (Windows Forms)  
 - **UI:** Windows Forms  
 - **IDE:** Visual Studio
-- - **Database:** SSMS 
+- **Database:** SSMS 
 - **Architecture:** Form-based desktop workflow  
 
 ---
